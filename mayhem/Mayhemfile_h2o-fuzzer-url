@@ -1,0 +1,9 @@
+project: savantenvs/h2o
+target: h2o-fuzzer-url
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/h2o-fuzzer-url/testsuite
+cmds:
+  - cmd: /mayhem/h2o-fuzzer-url
+    libfuzzer: true
+    timeout: 30
